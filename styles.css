@@ -1,0 +1,40 @@
+.preset-scoped-lorebooks {
+    margin-top: 5px;
+}
+
+.preset-scoped-lorebooks-subtitle {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.preset-scoped-lorebooks-add-row {
+    margin: 5px 0;
+}
+
+#presetScopedLorebooksAddBtn.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.preset-scoped-lorebooks-row {
+    padding: 2px 0;
+}
+
+.preset-scoped-lorebooks-empty,
+.preset-scoped-lorebooks-unowned {
+    opacity: 0.7;
+    font-style: italic;
+    color: var(--SmartThemeQuoteColor, #aaa);
+}
+
+.preset-scoped-lorebooks-owners {
+    opacity: 0.7;
+}
+
+.preset-scoped-lorebooks-warn {
+    color: var(--warning, #e0a030);
+}
+
+.preset-scoped-lorebooks-info {
+    opacity: 0.6;
+}

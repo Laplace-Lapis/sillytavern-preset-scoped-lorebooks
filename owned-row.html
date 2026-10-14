@@ -1,0 +1,9 @@
+<div class="preset-scoped-lorebooks-row flex-container alignItemsCenter flexGap5" data-book="{{book}}">
+    <span class="flex1">{{book}}</span>
+    {{#if missing}}
+        <i class="fa-solid fa-circle-exclamation preset-scoped-lorebooks-warn" data-i18n="[title]This lorebook does not exist (deleted or renamed?)" title="This lorebook does not exist (deleted or renamed?)"></i>
+    {{else if notGlobal}}
+        <i class="fa-solid fa-circle-info preset-scoped-lorebooks-info" data-i18n="[title]Not selected as a global lorebook, so owning it has no effect" title="Not selected as a global lorebook, so owning it has no effect"></i>
+    {{/if}}
+    <div class="preset-scoped-lorebooks-remove menu_button fa-solid fa-xmark" data-i18n="[title]Remove from this preset (the lorebook stays scoped)" title="Remove from this preset (the lorebook stays scoped)"></div>
+</div>

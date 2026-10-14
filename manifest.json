@@ -1,0 +1,12 @@
+{
+    "display_name": "Preset-Scoped Lorebooks",
+    "description": "Lets Chat Completion presets own global lorebooks, so those books only take effect while their preset is selected.",
+    "author": "Laplace-Lapis",
+    "version": "1.0.0",
+    "js": "index.js",
+    "css": "styles.css",
+    "requires": [],
+    "optional": [],
+    "homePage": "https://github.com/Laplace-Lapis/sillytavern-preset-scoped-lorebooks",
+    "auto_update": true
+}

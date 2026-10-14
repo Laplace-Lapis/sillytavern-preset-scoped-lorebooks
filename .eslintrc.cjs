@@ -1,0 +1,56 @@
+// Standalone ESLint config for this extension repo, mirroring the host SillyTavern repo's rules.
+// The host repo's own `npm run lint` ignores `public/scripts/extensions/third-party/**`, so each
+// extension repo needs its own copy. Run `npx eslint index.js` from this directory.
+module.exports = {
+    root: true,
+    extends: [
+        'eslint:recommended',
+    ],
+    env: {
+        browser: true,
+        es2021: true,
+    },
+    parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+    },
+    globals: {
+        SillyTavern: 'readonly',
+        toastr: 'readonly',
+        jQuery: 'readonly',
+        $: 'readonly',
+    },
+    rules: {
+        'no-unused-vars': ['error', { args: 'none' }],
+        'quotes': ['error', 'single'],
+        'semi': ['error', 'always'],
+        'indent': ['error', 4, { SwitchCase: 1, FunctionDeclaration: { parameters: 'first' } }],
+        'comma-dangle': ['error', 'always-multiline'],
+        'eol-last': ['error', 'always'],
+        'no-trailing-spaces': 'error',
+        'object-curly-spacing': ['error', 'always'],
+        'space-infix-ops': 'error',
+        'no-unused-expressions': ['error', { allowShortCircuit: true, allowTernary: true }],
+        'no-cond-assign': 'error',
+        'no-unneeded-ternary': 'error',
+        'brace-style': ['error', '1tbs', { allowSingleLine: true }],
+        'array-bracket-spacing': ['error', 'never'],
+        'computed-property-spacing': ['error', 'never'],
+        'block-spacing': ['error', 'always'],
+        'keyword-spacing': ['error', { before: true, after: true }],
+        'space-before-blocks': ['error', 'always'],
+        'space-before-function-paren': ['error', { anonymous: 'always', named: 'never', asyncArrow: 'always' }],
+        'space-in-parens': ['error', 'never'],
+        'comma-spacing': ['error', { before: false, after: true }],
+        'key-spacing': ['error', { beforeColon: false, afterColon: true }],
+        'func-call-spacing': ['error', 'never'],
+        'no-multiple-empty-lines': ['error', { max: 2, maxEOF: 1, maxBOF: 0 }],
+        'padded-blocks': ['error', 'never'],
+        'no-whitespace-before-property': 'error',
+        'space-unary-ops': ['error', { words: true, nonwords: false }],
+        'arrow-spacing': ['error', { before: true, after: true }],
+        'template-curly-spacing': ['error', 'never'],
+        'rest-spread-spacing': ['error', 'never'],
+        'switch-colon-spacing': ['error', { after: true, before: false }],
+    },
+};

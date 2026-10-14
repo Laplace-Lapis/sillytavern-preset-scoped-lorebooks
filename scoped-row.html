@@ -1,0 +1,9 @@
+<div class="preset-scoped-lorebooks-row flex-container alignItemsCenter flexGap5" data-book="{{book}}">
+    <div class="flex1 flex-container flexFlowColumn flexNoGap">
+        <span>{{book}}{{#if missing}} <i class="fa-solid fa-circle-exclamation preset-scoped-lorebooks-warn" data-i18n="[title]This lorebook does not exist (deleted or renamed?)" title="This lorebook does not exist (deleted or renamed?)"></i>{{/if}}</span>
+        <small class="{{#if owned}}preset-scoped-lorebooks-owners{{else}}preset-scoped-lorebooks-unowned{{/if}}">{{owners}}</small>
+    </div>
+    {{#if canRelease}}
+        <div class="preset-scoped-lorebooks-release menu_button fa-solid fa-lock-open" data-i18n="[title]Release: make this a regular global lorebook again" title="Release: make this a regular global lorebook again"></div>
+    {{/if}}
+</div>
